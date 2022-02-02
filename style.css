@@ -288,3 +288,7 @@ input[type='text'] {
   cursor: pointer;
   height: 30px;
 }
+
+#name {
+  margin-bottom: 20px;
+}

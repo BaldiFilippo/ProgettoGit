@@ -74,3 +74,18 @@ open.addEventListener('click', () => {
 close.addEventListener('click', () => {
   modalContainer.classList.remove('show')
 })
+
+function sendEmail() {
+  var tempParams = {
+    target: document.getElementById('email').value,
+    name: document.getElementById('name').value,
+  }
+  emailjs.send('service_fe8urc9', 'template_oj2qyjn', tempParams).then(
+    function (response) {
+      console.log('SUCCESS!', response.status, response.text)
+    },
+    function (error) {
+      console.log('FAILED...', error)
+    }
+  )
+}

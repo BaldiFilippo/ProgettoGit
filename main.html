@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style-page404.css">
+    <link rel="stylesheet" href="style-page404.css" />
     <title>Document</title>
   </head>
   <body>
@@ -19,9 +19,13 @@
     </nav>
 
     <section class="hero-content">
-      <a class="change-page" href="index.html"><img src="img/DWO5Hzg.png" alt="Struzzo" width="500px"></a>
+      <a class="change-page" href="index.html"
+        ><img src="img/DWO5Hzg.png" alt="Struzzo" width="500px"
+      /></a>
       <h3 class="img-title">Working progress</h3>
-      <p class="img-paragraph"> Clicca sulla immagine per ritornare alla home page.</p>
+      <p class="img-paragraph">
+        Clicca sulla immagine per ritornare alla home page.
+      </p>
     </section>
 
     <!-- modal -->
@@ -29,12 +33,31 @@
       <div class="modal">
         <img src="img/x.svg" class="x" id="close" alt="" />
         <h2>Compila il Form per ricevere gli appunti</h2>
-        <input class="input" type="text" placeholder="Nome e Cognome" />
-        <input class="input" type="text" placeholder="Email" />
-        <a><div class="button close email-btn" id="confirm">Conferma</div></a>
+        <div class="inputs">
+          <input class="input" id="name" type="text" placeholder="Nome" />
+          <input class="input" type="text" placeholder="Email" />
+        </div>
+        <a
+          ><div
+            class="button close email-btn"
+            onclick="sendEmail()"
+            id="confirm"
+          >
+            Conferma
+          </div></a
+        >
       </div>
     </div>
     <!--  -->
     <script src="index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      ;(function () {
+        emailjs.init('user_FxFYTovXOB2ZwZ8T5U3fh')
+      })()
+    </script>
   </body>
 </html>

@@ -33,14 +33,32 @@
         <div class="modal">
           <img src="img/x.svg" class="x" id="close" alt="x" />
           <h2>Compila il Form per ricevere gli appunti</h2>
-          <input class="input" type="text" placeholder="Nome e Cognome" />
-          <input class="input" id="email" type="text" placeholder="Email" />
-          <a><div class="button close email-btn" id="confirm">Conferma</div></a>
+          <div class="inputs">
+            <input class="input" id="name" type="text" placeholder="Nome" />
+            <input class="input" id="email" type="text" placeholder="Email" />
+          </div>
+          <a
+            ><div
+              class="button close email-btn"
+              onclick="sendEmail()"
+              id="confirm"
+            >
+              Conferma
+            </div></a
+          >
         </div>
       </div>
     </section>
 
     <script src="index.js"></script>
-    <script></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      ;(function () {
+        emailjs.init('user_FxFYTovXOB2ZwZ8T5U3fh')
+      })()
+    </script>
   </body>
 </html>
