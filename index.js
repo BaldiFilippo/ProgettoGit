@@ -58,6 +58,7 @@ window.onload = () => {
     element.addEventListener('click', (e) => {
       e.preventDefault()
       let href = element.getAttribute('href')
+      console.log('cambio pagina')
 
       transition_element.classList.add('is-active')
 
