@@ -100,6 +100,7 @@ function checkEmail() {
 
 function sendEmail() {
   modalContainer.classList.remove('show')
+  console.log('email sent')
 
   var tempParams = {
     target: document.getElementById('email').value,
