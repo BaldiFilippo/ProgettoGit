@@ -2,6 +2,8 @@ const darkModeBtn = document.querySelector('input')
 const body = document.querySelector('body')
 const a = document.querySelectorAll('a')
 const radius = document.querySelector('.radius2')
+const stars = document.querySelector('#stars')
+const stars2 = document.querySelector('#stars2')
 
 var dark = false
 
@@ -9,15 +11,20 @@ darkModeBtn.addEventListener('change', () => {
   if (darkModeBtn.checked) {
     body.classList.add('dark')
     a.forEach((element) => {
-      element.style.color = '#faf7f2'
+      element.style.boxshadow = '#faf7f2'
     })
     radius.style.backgroundColor = '#002437'
+    //remove stars
+    stars.style.display = 'none'
+    stars2.style.display = 'none'
 
     // all pages will be dark
     localStorage.setItem('dark', 'true')
   } else {
     body.classList.remove('dark')
     radius.style.backgroundColor = '#faf7f2'
+    stars.style.display = 'block'
+    stars2.style.display = 'block'
 
     a.forEach((element) => {
       element.style.color = '#000'
