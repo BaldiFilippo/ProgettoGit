@@ -267,6 +267,10 @@ input[type='text'] {
   position: relative;
 }
 
+.modal-title {
+  text-align: center;
+}
+
 .close {
   width: 480px;
   display: flex;
