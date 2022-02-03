@@ -73,9 +73,29 @@ open.addEventListener('click', () => {
 
 close.addEventListener('click', () => {
   modalContainer.classList.remove('show')
+  //reset inputs
+  document.getElementById('email').value = ''
+  document.getElementById('name').value = ''
 })
 
+document.getElementById('confirm').addEventListener('click', checkEmail)
+
+function checkEmail() {
+  // if email is valid, send email
+  if (
+    document.getElementById('email').value.length > 0 &&
+    document.getElementById('name').value.length > 0 &&
+    document.getElementById('email').value.includes('@')
+  ) {
+    sendEmail()
+  } else {
+    alert('inserire email e nome corretti!')
+  }
+}
+
 function sendEmail() {
+  modalContainer.classList.remove('show')
+
   var tempParams = {
     target: document.getElementById('email').value,
     name: document.getElementById('name').value,
@@ -88,4 +108,8 @@ function sendEmail() {
       console.log('FAILED...', error)
     }
   )
+
+  //reset inputs
+  document.getElementById('email').value = ''
+  document.getElementById('name').value = ''
 }
