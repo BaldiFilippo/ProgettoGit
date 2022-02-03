@@ -1,31 +1,26 @@
 const darkModeBtn = document.querySelector('input')
 const body = document.querySelector('body')
 const a = document.querySelectorAll('a')
-const radius = document.querySelector('.radius2')
 const stars = document.querySelector('#stars')
 const stars2 = document.querySelector('#stars2')
 const titlePage2 = document.querySelector('.title-page2')
+const radius2 = document.getElementById('radius')
 
 var dark = false
 
 darkModeBtn.addEventListener('change', () => {
   if (darkModeBtn.checked) {
     body.classList.add('dark')
-    a.forEach((element) => {
-      element.style.boxshadow = '#faf7f2'
-    })
-    titlePage2.style.color = '#faf7f2'
-    radius.style.backgroundColor = '#002437'
-    //remove stars
+    radius2.classList.add('radius2-dark')
+    radius2.classList.remove('radius2-light')
     stars.style.display = 'none'
     stars2.style.display = 'none'
 
-    // all pages will be dark
     localStorage.setItem('dark', 'true')
   } else {
     body.classList.remove('dark')
-    titlePage2.style.color = '#002437'
-    radius.style.backgroundColor = '#faf7f2'
+    radius2.classList.remove('radius2-dark')
+    radius2.classList.add('radius2-light')
     stars.style.display = 'block'
     stars2.style.display = 'block'
 
@@ -123,3 +118,14 @@ function sendEmail() {
   document.getElementById('email').value = ''
   document.getElementById('name').value = ''
 }
+
+const checklist = document.querySelectorAll('.check-list')
+const listElement = document.querySelectorAll('.list-element')
+
+checklist.forEach((element) => {
+  element.addEventListener('click', (e) => {
+    e.preventDefault()
+    element.classList.toggle('checked')
+    element.nextElementSibling.classList.toggle('text-checked')
+  })
+})

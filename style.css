@@ -60,13 +60,20 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: #faf7f2;
   padding: 7px;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   transition: all 0.3s ease-in-out;
+}
+
+.radius2-light {
+  background-color: #faf7f2;
+}
+
+.radius2-dark {
+  background-color: #002437;
 }
 
 .technical-preview {
@@ -168,11 +175,6 @@ input:checked + .check::before {
 
 input:checked + .check {
   background-color: #ff5400;
-}
-
-.dark {
-  background-color: #002437;
-  color: #faf7f2;
 }
 
 .transition-1 {
@@ -327,7 +329,7 @@ input[type='text'] {
   }
 
   #confirm {
-    width: 100%;
+    width: 220px;
   }
 }
 
@@ -358,8 +360,14 @@ input[type='text'] {
   }
 }
 
+.dark {
+  background-color: #002437;
+  color: #faf7f2;
+}
+
 #stars {
   position: absolute;
+  z-index: -1;
   width: 2px;
   height: 2px;
   background: transparent;
@@ -545,6 +553,7 @@ input[type='text'] {
 
 #stars2 {
   position: absolute;
+  z-index: -1;
   width: 2px;
   height: 2px;
   background: transparent;
