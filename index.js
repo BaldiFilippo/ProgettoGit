@@ -4,6 +4,7 @@ const a = document.querySelectorAll('a')
 const radius = document.querySelector('.radius2')
 const stars = document.querySelector('#stars')
 const stars2 = document.querySelector('#stars2')
+const titlePage2 = document.querySelector('.title-page2')
 
 var dark = false
 
@@ -13,6 +14,7 @@ darkModeBtn.addEventListener('change', () => {
     a.forEach((element) => {
       element.style.boxshadow = '#faf7f2'
     })
+    titlePage2.style.color = '#faf7f2'
     radius.style.backgroundColor = '#002437'
     //remove stars
     stars.style.display = 'none'
@@ -22,6 +24,7 @@ darkModeBtn.addEventListener('change', () => {
     localStorage.setItem('dark', 'true')
   } else {
     body.classList.remove('dark')
+    titlePage2.style.color = '#002437'
     radius.style.backgroundColor = '#faf7f2'
     stars.style.display = 'block'
     stars2.style.display = 'block'
