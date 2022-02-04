@@ -49,6 +49,10 @@ ul li {
   margin-top: 10px;
 }
 
+.subtitle {
+  margin-bottom: 20px;
+}
+
 .check-list {
   border: 2px solid #848484;
   border-radius: 7px;
