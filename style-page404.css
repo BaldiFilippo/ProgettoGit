@@ -35,9 +35,18 @@ ul {
 }
 ul li {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 15px;
-  align-items: center;
+  align-items: left;
+}
+
+.element-title {
+  margin-left: 50px;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
 }
 
 .check-list {
