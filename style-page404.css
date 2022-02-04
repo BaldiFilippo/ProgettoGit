@@ -53,6 +53,9 @@ ul li {
 }
 
 .subtitle {
+  font-weight: 400;
+}
+.subtitle2 {
   margin-bottom: 20px;
   font-weight: 400;
 }

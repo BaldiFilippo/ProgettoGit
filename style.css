@@ -214,7 +214,7 @@ input:checked + .check {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 0%;
   z-index: 101;
   background-color: #ff5400;
   transition: 0.5s ease-in-out;
@@ -222,6 +222,7 @@ input:checked + .check {
 
 .transition-3.is-active {
   top: 0;
+  height: 100%;
 }
 
 .modal-container {
