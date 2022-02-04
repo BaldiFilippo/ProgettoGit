@@ -13,6 +13,9 @@
   nav {
     padding: 10px;
   }
+  .subtitle {
+    font-size: 1.1rem;
+  }
 }
 
 @media (min-width: 767px) and (max-width: 1025px) {
@@ -51,6 +54,7 @@ ul li {
 
 .subtitle {
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .check-list {
