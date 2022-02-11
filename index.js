@@ -6,32 +6,32 @@ const stars2 = document.querySelector('#stars2')
 const titlePage2 = document.querySelector('.title-page2')
 const radius2 = document.getElementById('radius')
 
-var dark = false
+// var dark = false
 
-darkModeBtn.addEventListener('change', () => {
-  if (darkModeBtn.checked) {
-    body.classList.add('dark')
-    radius2.classList.add('radius2-dark')
-    radius2.classList.remove('radius2-light')
-    stars.style.display = 'none'
-    stars2.style.display = 'none'
+// darkModeBtn.addEventListener('change', () => {
+//   if (darkModeBtn.checked) {
+//     body.classList.add('dark')
+//     radius2.classList.add('radius2-dark')
+//     radius2.classList.remove('radius2-light')
+//     stars.style.display = 'none'
+//     stars2.style.display = 'none'
 
-    localStorage.setItem('dark', 'true')
-  } else {
-    body.classList.remove('dark')
-    radius2.classList.remove('radius2-dark')
-    radius2.classList.add('radius2-light')
-    stars.style.display = 'block'
-    stars2.style.display = 'block'
+//     localStorage.setItem('dark', 'true')
+//   } else {
+//     body.classList.remove('dark')
+//     radius2.classList.remove('radius2-dark')
+//     radius2.classList.add('radius2-light')
+//     stars.style.display = 'block'
+//     stars2.style.display = 'block'
 
-    a.forEach((element) => {
-      element.style.color = '#000'
-    })
-    // all pages will be light
-    localStorage.setItem('dark', 'false')
-  }
-  console.log(dark)
-})
+//     a.forEach((element) => {
+//       element.style.color = '#000'
+//     })
+//     // all pages will be light
+//     localStorage.setItem('dark', 'false')
+//   }
+//   console.log(dark)
+// })
 
 window.onload = () => {
   if (localStorage.getItem('dark') === 'true') {
@@ -58,7 +58,6 @@ window.onload = () => {
     element.addEventListener('click', (e) => {
       e.preventDefault()
       let href = element.getAttribute('href')
-      console.log('cambio pagina')
 
       transition_element.classList.add('is-active')
 
@@ -80,7 +79,7 @@ open.addEventListener('click', () => {
 close.addEventListener('click', () => {
   modalContainer.classList.remove('show')
   //reset inputs
-  document.getElementById('email').value = ''
+  document.getElementById('efmail').value = ''
   document.getElementById('name').value = ''
 })
 
@@ -129,5 +128,33 @@ checklist.forEach((element) => {
     e.preventDefault()
     element.classList.toggle('checked')
     element.nextElementSibling.classList.toggle('text-checked')
+  })
+})
+
+// drop down list
+const mainListElement = document.querySelectorAll('.main-list-element')
+const index = document.querySelector('.index')
+var count = 0
+mainListElement.forEach((element) => {
+  element.addEventListener('click', function () {
+    // arrow will rotate when i click on main list element
+    const listElement = element.nextElementSibling
+    // if it has not been clicked before, add the class active
+
+    if (listElement.classList.contains('second-list-active')) {
+      listElement.classList.remove('second-list-active')
+      this.querySelector('.arrow').classList.remove('rotate')
+      count--
+    } else {
+      listElement.classList.add('second-list-active')
+      this.querySelector('.arrow').classList.add('rotate')
+      count++
+    }
+
+    if (count >= 4) {
+      index.style.overflow = 'scroll'
+    } else {
+      index.style.overflow = 'hidden'
+    }
   })
 })

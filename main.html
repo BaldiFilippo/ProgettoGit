@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style-page404.css" />
+    <link rel="stylesheet" href="page.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -18,147 +18,297 @@
   <body>
     <div class="transition transition-3 is-active"></div>
     <nav class="container">
-      <label>
+      <!-- <label>
         <input type="checkbox" />
         <span class="check"></span>
-      </label>
-      <a><div id="open" class="open email-btn">Log in</div></a>
+      </label> -->
+      <a href="index.html" class="change-page"><img class="logo" src="/img/git.svg" alt="" /></a>
+
+
+      <a><div class="email-btn open" id="open">Log in</div></a>
     </nav>
+    <div class="hero-content">
+      <div class="index">
+        <ul class="main-list">
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text">Introduzione</span>
+            </div>
+            <ul class="second-list">
+              <li class="second-list-element">
+                <a href="#definizione" class="link">Cos'è Git?</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#benefici" class="link"> Benefici principali</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-per-sviluppatori" class="link">Git per sviluppatori</a>
+              </li>
+            </ul>
+          </li>
 
-    <div class="container">
-      <section class="hero-content-page2">
-        <div class="title-box">
-          <a class="change-page" href="index.html">
-            <div class="home-btn">
-              <i class="arrow fas fa-chevron-left"></i>
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text"
+                >Inizializzazione di una repository</span
+              >
             </div>
-          </a>
-          <h2 class="title-page2">Sommario</h2>
-        </div>
-        <h3 class="subtitle">
-          Esegui il log-in per accedere agli appunti e utilizza questa lista per
-          organizzare al meglio lo studio. <br />
-        </h3>
-        <h3 class="subtitle2">
-          Gli argomenti sono elencati in ordine di sviluppo per la gestione del
-          codice in un progetto.
-        </h3>
-
-        <ul>
-          <li>
-            <h2 class="element-title">1. Inizializzazione di una repository</h2>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git init</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git clone</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git init vs Git clone</span>
-            </div>
+            <ul class="second-list">
+              <li class="second-list-element">
+                <a href="#repository">Cos'è una repository</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-init">Git init</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-clone">Git clone</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-clone-vs">Git clone vs Git init</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <h2 class="element-title">2. Salvare le modifiche in Git</h2>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git add</span>
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text">Salvataggio delle modifiche</span>
             </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git commit</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git stash</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git ignore</span>
-            </div>
+            <ul class="second-list">
+              <li class="second-list-element">
+                <a href="#git-add"> Git add</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-commit"> Git commit</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-stash">Git stash</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-ignore"> Git ignore</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <h2 class="element-title">3. Ispezione di una repository</h2>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git status</span>
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text">Ispezione di una repository</span>
             </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git log</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git status vs git log</span>
-            </div>
+            <ul class="second-list">
+              <li class="second-list-element">
+                <a href="#git-status">Git status</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-log">Git log</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-status-vs"> Git status vs git log</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <h2 class="element-title">4. Gestione dei commit</h2>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements"
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text">Ispezione di una repository</span>
+            </div>
+            <ul class="second-list">
+              <li class="second-list-element">
+                <a href="#fit-status">Git status</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-log"> Git log</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-status-vs"> Git status vs git log</a>
+              </li>
+            </ul>
+          </li>
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text"
                 >Annullamento di commit e modifiche</span
               >
             </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git checkout</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git reset</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git revert</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git reset vg Git revert</span>
-            </div>
+            <ul class="second-list">
+              <li class="second-list-element">
+                <a href="#gestione-modifiche"> Gestione delle modifiche</a>
+              </li>
+              <li class="second-list-element"><a href="#git-rm">Git rm</a></li>
+              <li class="second-list-element">
+                <a href="#git-checkout">Git checkout</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-revert">Git revert</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-reset">Git reset</a>
+              </li>
+              <li class="second-list-element">
+                <a href="#git-revert-vs"> Git revert vs Git reset</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <h2 class="element-title">5. Gestione dei Branch</h2>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git branch</span>
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text">gestione della commit history</span>
             </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git checkout</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git merge</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git merge vs Git rebase</span>
-            </div>
+            <ul class="second-list">
+              <li class="second-list-element"></li>
+              <li class="second-list-element">Git commit --amend</li>
+              <li class="second-list-element">Git rebase</li>
+              <li class="second-list-element">Git reflog</li>
+            </ul>
           </li>
-          <li>
-            <h2 class="element-title">6. La sincronizzazione di Git</h2>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git remote</span>
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text">Branch</span>
             </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git fetch</span>
+            <ul class="second-list">
+              <li class="second-list-element"></li>
+              <li class="second-list-element">Git branch</li>
+              <li class="second-list-element">Git checkout</li>
+              <li class="second-list-element">Git merge</li>
+              <li class="second-list-element">Git merge vs Git rebase</li>
+            </ul>
+          </li>
+          <li class="row">
+            <div class="main-list-element">
+              <i class="arrow fas fa-chevron-right"></i
+              ><span class="main-list-text">Sincronizzazione di Git</span>
             </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git push</span>
-            </div>
-            <div class="box">
-              <div class="check-list"></div>
-              <span class="list-elements">Git pull</span>
-            </div>
+            <ul class="second-list">
+              <li class="second-list-element"></li>
+              <li class="second-list-element">Git remote</li>
+              <li class="second-list-element">Git fetch</li>
+              <li class="second-list-element">Git push</li>
+              <li class="second-list-element">Git pull</li>
+            </ul>
           </li>
         </ul>
-      </section>
+      </div>
+      <div class="content">
+        <div id="definizione" class="paragraph">
+          <h3>Cos'è Git?</h3>
+          <p>
+            Git è il sistema di controllo delle versioni più utilizzato al
+            mondo. Git è un progetto open source originariamente sviluppato nel
+            2005 da Linus Torvalds, il famoso creatore del kernel del sistema
+            operativo Linux. Git è un esempio di DVCS (Distributed Version
+            Control System), quindi, la copia di lavoro del codice di ogni
+            sviluppatore è anche un repository che può contenere la cronologia
+            completa di tutte le modifiche. In altre parole, è un sistema che
+            tiene traccia dei cambiamenti ai file del nostro progetto col tempo.
+            Ci permette di registrare cambiamenti al progetto e tornare indietro
+            ad una versione specifica del file tracciati, in qualsiasi momento.
+            Questo sistema può essere usato da molte persone per lavorare
+            insieme in modo efficiente e collaborare su progetti di gruppo, in
+            cui ogni sviluppatore può avere la propria versione del progetto,
+            distribuito sul loro computer. Più tardi, queste singole versioni
+            del progetto potranno essere unite e adattate all’interno della
+            versione principale.
+          </p>
+        </div>
+        <div id="benefici" class="paragraph">
+          <h3>Benefici Principali</h3>
+          <h4>Ti consente di tenere traccia delle tue modifiche</h4>
+          <p>
+            Hai sempre uno stato che monitora esattamente quali modifiche sono
+            state apportate in qualsiasi momento.
+          </p>
+          <h4>Backup storico, che usa gli “snapshots” (istantanee)</h4>
+          <p>
+            Fondamentalmente puoi mantenere una versione precedente e
+            ripristinarla se necessario. Quindi se vengono riscontrati bug o si
+            incasina qualcosa, è sempre possibile tornare indietro con un backup
+            storico e annullare tali modifiche.
+          </p>
+          <h4>Team development</h4>
+          <p>
+            Consente a un team di sviluppatori di lavorare effettivamente sullo
+            stesso codice contemporaneamente e quindi unire le loro modifiche
+            insieme per fare progressi su un progetto.
+          </p>
+          <h4>Flessibilità del progetto</h4>
+          <p>
+            Consente di lavorare localmente su un progetto oppure Git o GitHub
+            possono essere utilizzati come parte dei flussi DevOps.
+          </p>
+          <h4>Branching</h4>
+          <p>
+            I rami vengono creati dal progetto di base, al fine di sviluppare
+            una nuova funzionalità, correggere un bug o semplicemente eseguire
+            un refactoring. Impediscono agli sviluppatori di software di
+            disturbarsi a vicenda e consentono loro di lavorare in parallelo.
+            Una volta terminata e verificata una modifica, il ramo viene
+            nuovamente unito al tronco.
+          </p>
+        </div>
+        <div id="git-per-sviluppatori" class="paragraph">
+          <h3>Git per sviluppatori</h3>
+          <p>Uno dei maggiori vantaggi di Git sono le sue capacità di ramificazione. A differenza dei sistemi di controllo delle versioni centralizzati, i rami Git sono economici e facili da unire. Ciò facilita il flusso di lavoro degli utenti di Git.</p>
+        <div class="img1-container"><img class="img-1" src="img/1.svg" alt=""></div> 
+        <p>I rami forniscono un ambiente isolato per ogni modifica alla base del codice. Quando uno sviluppatore vuole iniziare a lavorare su qualcosa, non importa quanto grande o piccolo, crea un nuovo branch. Ciò garantisce che il branch principale (Main) contenga sempre un codice originale.</p>
+        <p>Git, essendo un sistema di controllo di versioni distribuito, invece di fare una copia della repository, ogni sviluppatore ottiene il proprio repository locale, completa con tutta la cronologia dei commit.</p>
+        <div class="img2-container"><img class="img-2" src="/img/2.svg" alt=""></div>
+        <p>Avere una cronologia locale completa, rende Git veloce, poiché significa che non è necessaria una connessione di rete per creare commit, ispezionare versioni precedenti di un file o eseguire “diffs” tra i commit.
+        Lo sviluppo distribuito semplifica inoltre la scalabilità del team di sviluppo. Se qualcuno interrompe il ramo di produzione in SVN, gli altri sviluppatori non possono archiviare le modifiche finché non vengono risolte. Con Git questo tipo di blocco non esiste. Tutti possono continuare a svolgere le proprie attività nei propri repository locali.
+        </p>
+        <h4>Richiesta di pull</h4>
+        <p>Una richiesta pull è un modo per chiedere a un altro sviluppatore di unire uno dei tuoi rami nel proprio repository. Ciò non solo rende più facile per i responsabili del progetto tenere traccia delle modifiche, ma consente anche agli sviluppatori di avviare discussioni sul loro lavoro prima di integrarlo con il resto della base di codice.</p>
+        <div class="img3-container"><img class="img-3" src="/img/3.svg" alt=""></div>
+        <p>Le richieste pull sono estremamente versatili, infatti, quando uno sviluppatore rimane bloccato con un problema difficile, può aprire una pull request per chiedere aiuto al resto del team. Facendo ciò, gli sviluppatori junior possono essere sicuri di non distruggere l'intero progetto trattando le richieste pull come una revisione formale del codice.</p>
+        <p>In molti ambienti, Git è diventato il sistema di controllo standard della versione previsto per i nuovi progetti.</p>
+        <div class="img4-container"><img class="img-4" src="/img/4.svg" alt=""></div>
+        <p>Inoltre, Git è molto popolare tra i progetti open source. Ciò significa che è facile sfruttare librerie di terze parti e incoraggiare altri a creare il proprio codice open source.</p>
+      </div>
+      <div class="paragraph" id="repository">
+        <h3>Cos'è una repository?</h3>
+        <p>Una repository è un archivio virtuale del tuo progetto. Ti consente di salvare versioni del tuo codice, a cui puoi accedere quando necessario. <br> Possiamo individuare due maggiori tipi di repositories:</p>
+        <h4>Repository locale:</h4>
+        <p>un repository isolato salvato sul tuo computer, dove puoi lavorare sulla versione locale del tuo progetto.</p>
+        <h4>Repository remota:</h4>
+        <p>generalmente salvato al di fuori del tuo sistema locale isolato, di solito su un server remoto. Spesso è utile per lavorare in gruppo, è il posto in cui puoi condividere il tuo codice, vedere quello di altre persone e integrarlo con il tuo e inoltre puoi effettuare un “push” delle modifiche alla repository remota.</p>
+      </div>
+      <div class="paragraph" id="git-init">
+        <h3>Git init</h3>
+        <p>Usa il comando <span class="code">git init</span> per convertire un progetto esistente senza versione in un repository di Git.</p>
+        <p>La maggior parte degli altri comandi Git non sono disponibili in un repository noninizializzato, quindi questo è solitamente il primo comando che esegui in un nuovo progetto.</p>
+      </div>
+      <div class="paragraph" id ="git-clone">
+        <h3>Git clone</h3>
+        <p>Il comando <span class="code">git clone</span>  viene utilizzato principalmente per puntare a un repository esistente e creare un clone o una copia di quel repository in una nuova directory, in un'altra posizione.
+          Per farlo, vai su GitHub e apri una repository, quindi copia l'URL SSH. <br> Dopodiché esegui questo comando: <span class="code">git clone SSH_URL</span></p>
+          <p>Questo aggiunge la cartella .git e il repository remoto.
+          Il modello di collaborazione di Git si basa sull'interazione tra repository e repository. Invece di controllare una copia funzionante nel repository centrale, puoi eseguire il push o il pull dei commit da una repository all'altra.</p>
+          <div class="img5-container"><img class="img-5" src="/img/5.svg" alt=""></div>
+      </div>
+      <div class="paragraph" id="git-clone-vs">
+        <h3>Git clone vs Git init</h3>
+        <p><sapn class="code">git init</sapn> e <span class="code">git clone</span> possono essere facilmente confusi. Ad alto livello, possono essere usati entrambi per "inizializzare un nuovo repository". Tuttavia, git clone dipende da git init. Git clone viene utilizzato per creare una copia di un repository già esistente in remoto. </p>
+      </div>
+      <div class="paragraph" id="git-add">
+        <h3>Git add</h3>
+        <p>Dalla cartella del progetto, possiamo usare git add per aggiungere i nostri file nella staging area che permette di tracciarli.</p>
+        <div class="img6-container"><img class="img-6" src="/img/6.svg" alt=""></div>
+        <p>Possiamo aggiungere un file specifico alla staging area con il comando <span class="code">git add nomeDelFile</span></p>
+        <p>Possiamo anche aggiungere più file.
+        Invece di aggiungere i file individualmente, possiamo aggiungerli tutti insieme dalla cartella del progetto alla staging area: <span class="code">git add .</span></p>
+      </div>
+      <div class="paragraph" id="git-commit">
+        <h3>Git commit</h3>
+        <p>Un commit è uno snapshot del nostro codice in un momento particolare che noi salviamo nella cronologia dei commit del nostro repository. Dopo aver aggiunto tutti i file che vogliamo tracciare alla staging area con il comando <span class="code">git add</span> , siao pronti a fare un commit.</p>
+        <div class="img7-container"><img class="img-7" src="/img/7.png" alt=""></div>
+        <p>Per eseguire i commit dei file dalla staging area, usiamo il comando <span class="code">git commit -m "descrizione del commit"</span></p>
+        <p>All’interno delle virgolette dovremmo scrivere un messaggio usato per identificarlo nella cronologia dei commit. Questo messaggio dovrebbe descrivere in maniera riassuntiva i cambiamenti effettuati alla repository.
+         <br> <span class="code">git commit --amend</span> è un modo conveniente per modificare il commit più recente. Ti consente di modificare il commit precedente invece di creare un commit completamente nuovo. Può anche essere utilizzato per modificare semplicemente il messaggio del commit precedente senza modificarne lo snapshot, ma, la modifica non solo altera il commit più recente, lo sostituisce
+        <span class="code">git commit --amend -m "descrizione del commit "</span>
+        interamente, il che significa che il commit modificato sarà una nuova entità con il proprio ref (puntatore). <br> </p>
+        <p>Per creare un nuovo commit, dovrai ripetere il processo di aggiungere i file alla staging area e fare il commit dopo. È molto utile usare il <span class="code">git status</span> per vedere quali file sono stati modificati</p>
+      </div>
     </div>
 
     <!-- modal -->

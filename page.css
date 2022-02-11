@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: unset;
+}
+
+.index-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  color: black;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  max-height: 100vh;
+}
+
+.code {
+  border-radius: 4px;
+  background: rgb(237, 237, 235);
+  color: #ff5400;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.paragraph {
+  margin-bottom: 40px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4 {
+  margin-top: 10px;
+  font-weight: 700;
+}
+.index {
+  font-size: 14px;
+  color: #4b4b4b;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  overflow: hidden;
+  max-height: calc(100vh - 140px);
+
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+.index::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-list-text {
+  margin-left: 10px;
+}
+
+.content {
+  padding-left: 100px;
+  padding-right: 10px;
+  font-size: 17px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 750px;
+  overflow: scroll;
+  height: calc(100vh - 140px);
+}
+
+.main-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-list-element {
+  padding: 0px 7px;
+  min-width: 220px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* second list will appear when i click the main element*/
+
+.second-list {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  list-style: none;
+  padding: 0px 0 10px 20px;
+}
+
+.arrow {
+  opacity: 0.5;
+}
+
+.second-list-active {
+  height: auto;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+.second-list-element {
+  padding: 5px 7px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img-1 {
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img1-container {
+  height: 400px;
+}
+
+.img2-container {
+  height: 350px;
+}
+
+img {
+  height: 350px;
+}
+
+.img3-container {
+  position: relative;
+  height: 350px;
+}
+
+.img-3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.img4-container {
+  position: relative;
+  height: 350px;
+}
+.img-4 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img5-container {
+  position: relative;
+  height: 350px;
+}
+.img-5 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-6 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 170px;
+}
+
+.img6-container {
+  margin-top: 20px;
+  position: relative;
+  height: 170px;
+  margin-bottom: 20px;
+}
+
+.img7-container {
+  position: relative;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.img-7 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home-arrow {
+  font-size: 2rem;
+  color: #848484;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .index {
+    display: none;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    position: relative;
+  }
+
+  .content {
+    font-size: 1rem;
+    max-width: 400px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+    overflow-x: hidden;
+  }
+}
