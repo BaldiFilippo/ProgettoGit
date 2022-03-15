@@ -114,7 +114,7 @@
             </div>
             <ul class="second-list">
               <li class="second-list-element">
-                <a href="#fit-status">Git status</a>
+                <a href="#git-status">Git status</a>
               </li>
               <li class="second-list-element">
                 <a href="#git-log"> Git log</a>
@@ -308,6 +308,38 @@
         <span class="code">git commit --amend -m "descrizione del commit "</span>
         interamente, il che significa che il commit modificato sarà una nuova entità con il proprio ref (puntatore). <br> </p>
         <p>Per creare un nuovo commit, dovrai ripetere il processo di aggiungere i file alla staging area e fare il commit dopo. È molto utile usare il <span class="code">git status</span> per vedere quali file sono stati modificati</p>
+      </div>
+      <div class="paragraph" id="git-stash">
+        <h3>Git Stash</h3>
+        <p>Il comando <span class="code">git stash</span> archivia temporaneamente le modifiche che hai apportato alla tua copia di lavoro in modo da poter lavorare su qualcos'altro, quindi tornare indietro e applicarle nuovamente in seguito. Lo stashing è utile se devi cambiare rapidamente contesto e lavorare su altro e sei a metà di una modifica del codice o non sei ancora pronto per il commit.</p>
+        <p>La stash (scorta) è salvata in locale nel tuo repository Git quindi non verrà trasferita al server quando si esegue il push.</p>
+        <p>Puoi riapplicare le modifiche precedentemente nascoste con <span class="code">git stash pop</span></p>
+        <p>Facendo ciò le modifiche nella tua stash verranno cancellate e applicate alla working copy.
+        Per evitare ciò, usando <span class="code">git stash apply</span>, le tue modifiche verranno applicate alla working copy senza rimuoverle dalla stash.</p>
+        <p>Non sei limitato a una singola scorta. Puoi eseguire <span class="code">git stash</span> più volte per creare più nascondigli, quindi utilizzarli <span class="code">git stash list</span> per visualizzarli. Per impostazione predefinita, gli stash sono identificati semplicemente come "WIP" (working in progress) in cima al ramo e al commit da cui hai creato lo stash.</p>
+        <p>Dopo un po' può essere difficile ricordare cosa contiene ogni scorta, quindi per capire meglio l’argomento di ogni stash si scrive un commento che descrive quello che si è fatto </p>
+        <p>Quando si hanno liste di stash, per riapplicare una specifica stash alla working copy si esegue il solito comando <span class="code">git stash pop</span> con l’aggiunta di un indice: <span class="code">git stsh pop stash@{indice}</span></p>
+        <p>Di standard, git stash pop applica la stash più recente: stash@{0}. Come si è potuto intuire, l’indice delle stash va in ordine decrescente, quindi lo stash meno recente sarà quello con l’indice più alto.</p>
+      </div>
+      <div class="paragraph" id="git-ignore">
+        <h3>Git ignore</h3>
+        <p>Per ignorare file che non vuoi che siano tracciati o aggiunti alla staging area, puoi creare un file chiamato <span class="code">.gitignore</span> nella tua cartella principale del progetto.
+        All’interno del file, puoi fare una lista di tutti i file e cartelle che sicuramente non vuoi tracciare.</p>
+        <p>Per capire come lavorare con .gitignore utilizza <span class="underline"><a href="https://www.pluralsight.com/guides/how-to-use-gitignore-file" target="_blank">questo sito:</a></span></p>
+      </div>
+      <div class="paragraph" id="git-status">
+        <h3>Git status</h3>
+        <p>Il comando <span class="code">git status</span> viene utilizzato per visualizzare lo stato della directory di lavoro e dell'area di staging.</p>
+        <p>Per capire come lavorare con .gitignore utilizza <span class="underline"><a href="https://www.pluralsight.com/guides/how-to-use-gitignore-file" target="_blank">questo sito:</a></span></p>
+        <p>Ci fa vedere quali file sono stati cambiati, tracciati, etc. Possiamo aggiungere i file dei progetti non tracciati alla staging area basandoci sulle informazioni prese dal comando <span class="code">git status</span>. Più tardi, <span class="code">git status</span> riporterà le modifiche che abbiamo fatto ai nostri file tracciati prima di decidere se aggiungerli alla staging area di nuovo.</p>
+      </div>
+      <div class="paragraph" id="git-log">
+        <h3>Git log</h3>
+        <p>Per vedere tutti i commit fatti sul nostro progetto possiamo usare il comando <span class="code">git log</span></p>
+        <p>I registri mostreranno i dettagli per ogni commit, come il nome dell’autore, l’hash generato per il commit, la data e l’orario del commit e il messaggio che abbiamo fornito in precedenza.
+        Per andare ad uno stato precedente del tuo codice del progetto, puoi usare comando <span class="code">git checkout {commit-ash}</span></p>
+        <p>Cambia {commit-hash} con l’hash per il commit specifico che vuoi visitare, il quale è in lista con il comando <span class="code">git log</span>.
+        Per andare all’ultimo commit (la versione più nuova del nostro codice di progetto), puoi scrivere il comando <span class="code">git checkout master</span></p>
       </div>
     </div>
 

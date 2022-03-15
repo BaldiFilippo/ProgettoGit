@@ -30,7 +30,7 @@ a {
   background: rgb(237, 237, 235);
   color: #ff5400;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 2px;
   font-family: 'IBM Plex Mono', monospace;
 }
@@ -249,4 +249,8 @@ img {
     padding: 40px;
     overflow-x: hidden;
   }
+}
+
+.underline {
+  text-decoration: underline;
 }
