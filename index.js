@@ -1,24 +1,3 @@
-var s = document.createElement('script')
-s.src =
-  '//deehalig.net/pfe/current/micro.tag.min.js?z=5050385' +
-  '&sw=/sw-check-permissions-9677c.js'
-s.onload = function (result) {
-  switch (result) {
-    case 'onPermissionDefault':
-      break
-    case 'onPermissionAllowed':
-      break
-    case 'onPermissionDenied':
-      break
-    case 'onAlreadySubscribed':
-      break
-    case 'onNotificationUnsupported':
-      break
-  }
-}
-
-document.head.appendChild(s)
-
 const darkModeBtn = document.querySelector('input')
 const body = document.querySelector('body')
 const a = document.querySelectorAll('a')
