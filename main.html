@@ -340,6 +340,37 @@
         Per andare ad uno stato precedente del tuo codice del progetto, puoi usare comando <span class="code">git checkout {commit-ash}</span></p>
         <p>Cambia {commit-hash} con l’hash per il commit specifico che vuoi visitare, il quale è in lista con il comando <span class="code">git log</span>.
         Per andare all’ultimo commit (la versione più nuova del nostro codice di progetto), puoi scrivere il comando <span class="code">git checkout master</span></p>
+        <p>Se stai lavorando ad un progetto grande, il git log risulterà incasinato perché ci saranno molti più commit; un modo per risolvere questo problema è usare <span class="code">git log —oneline </span></p>
+      </div>
+      <div class="paragraph" id="git-status-vs">
+        <h3>Git log vs Git status</h3>
+        <p>Mentre <span class="code">git status</span> ti consente di ispezionare la working directory e la staging area, <span class="code">git log</span> opera solo sulla cronologia dei commit.</p>
+        <div class="img8-container"><img class="img-8" src="/img/8.svg" alt=""></div>
+      </div>
+      <div class="paragraph" id="gestione-modifiche">
+        <h3>Annullamento di commit e modifiche</h3>
+        <p>Per capire bene come funziona l’annullamento in Git, bisogna pensare a esso come ad un'utilità di gestione della sequenza temporale. I commit sono snapshot di un momento o di punti di interesse lungo la timeline della cronologia di un progetto. Inoltre, è possibile gestire più timeline attraverso l'uso di branch. Quando si "annulla" in Git, di solito si torna o indietro o in un'altra timeline in cui non si sono verificati errori.</p>
+        <p>L'idea alla base di qualsiasi sistema di controllo della versione è archiviare copie "sicure" di un progetto in modo da non doversi mai preoccupare di rompere irreparabilmente la base di codice. Dopo aver creato una cronologia dei commit del progetto, puoi rivedere e rivisitare qualsiasi commit nella cronologia. Per far ciò si utilizza <span class="code">git log</span>.</p>
+        <div class="img9-container"><img class="img-9" src="/img/9.png" alt=""></div>
+        <p>Ogni commit ha un hash di identificazione SHA-1 univoco (ex: 6decb6f1). Questi ID vengono
+        utilizzati per percorrere la timeline impegnata e rivisitare i commit. Di default, git log mostra solo i commit del branch attualmente selezionato; è possibile però che il commit che stai cercando sia su un altro ramo. Puoi visualizzare tutti i commit su tutti i branch eseguendo <span class="code">git log --branches</span> .Usando invece <span class="code">git branch-a</span> verrà restituito un elenco di tutti i branch conosciuti. Uno di questi, può essere registrato utilizzando <span class="code">git log</span>.<br>
+        Quando hai trovato il riferimento del commit al punto della cronologia(history) che desideri visitare, puoi utilizzare il comando git checkout per ispezionare il commit.</p> <br>
+        <p><span class="code">git checkout</span> serve a "caricare" gli snapshots sul pc. Mentre lavoriamo al progetto, l’HEAD di solito punta al main o a qualche altro branch locale, ma quando si estrae un commit precedente, l’HEAD non punta più ad un branch, ma punta direttamente ad un commit.</p>
+        <div class="img10-container"><img class="img-10" src="/img/10.svg" alt=""></div>
+        <p>L'estrazione di un vecchio file non sposta l’HEAD, infatti, rimane sullo stesso branch e sullo stesso commit. Puoi quindi eseguire il commit della vecchia versione del file in un nuovo snapshot come faresti con qualsiasi altra modifica. Quindi questo utilizzo di <span class="code">git checkout</span> su un file serve per tornare a una vecchia versione di un singolo file.</p>
+        <br>
+        <p>Esempio:</p>
+        <div class="img11-container"><img class="img-11" src="/img/11.png" alt=""></div>
+        <p>Questo esempio lo utilizzerò per spiegare la differenza dei comandi che si usano di solito per l’annullamento di commit e modifiche. L’obbiettivo dell’esercizio è quello di annullare il commit 872fa7e che risulta, in un progetto ipotetico, una modifica sbagliata che vogliamo annullare. </p>
+      </div>
+      <div class="paragraph" id="git-rm">
+        <h3>Git rm</h3>
+        <p>Per rimuovere un file dalla staging area, esegui il comando <span class="code">git rm --cached</span></p>
+      </div>
+      <div class="paragraph" id="git-checkout">
+        <h3>Git checkout</h3>
+        <p>Usando il comando <span class="code">git checkout</span> possiamo controllare il commit precedente, a1e8fb5, mettendo il repository in uno stato prima che si verificasse il commit sbagliato. Il checkout di un commit specifico metterà il repository in uno stato di "detached HEAD". Ciò significa che non lavori più su nessuna branch. In uno stato “detached”, tutti i nuovi commit che esegui saranno resi “orfani” quando cambi branch in un branch stabilito. I commit orfani verranno eliminati dal Garbage Collector di Git. Per evitare che i commit orfani siano nel garbage collector, dobbiamo assicurarci di trovarci su un branch stabilito.</p>
+        <p>Dallo stato "detached HEAD", possiamo eseguire <span class="code">git checkout -b nuovo-branch</span>. Questo creerà un nuovo branch chiamato "nuovo-branch" che passerà a quello stato. Il repository è ora su una nuova timeline della cronologia in cui il commit 872fa7e non esiste più. A questo punto, possiamo continuare a lavorare su questo nuovo branch in cui il commit 872fa7e non esiste più e considerarlo “undone”(annullato). Questa strategia di annullamento non è appropriata se il branch in questione si tratta del main; questo perché il main branch non può essere mai cancellato dato che è il ramo portante di tutto il progetto.</p>
       </div>
     </div>
 

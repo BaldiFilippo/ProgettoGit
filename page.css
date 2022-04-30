@@ -208,12 +208,64 @@ img {
   margin-bottom: 30px;
 }
 
+.img8-container {
+  position: relative;
+  margin-bottom: 30px;
+  height: 750px;
+}
+
+.img-8 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
 .img-7 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
+.img9-container {
+  margin-top: 30px;
+  position: relative;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.img-9 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img10-container {
+  position: relative;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.img-10 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.img11-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  height: 200px;
+}
+
+.img-11 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
 .home-arrow {
   font-size: 2rem;
   color: #848484;
